@@ -1,0 +1,184 @@
+﻿@{Html.BeginForm("ImportHtmlTable", "ImportHtmlTable", FormMethod.Post);
+    {
+        <div class="Common">
+            <div class="tablediv">
+                <div class="rowdiv">
+                    <p>
+                        Essential XlsIO supports exporting HTML tables into Excel worksheets. The <b>ImportHtmlTable</b> method loads an HTML file and exports all the tables in the file to the worksheet.
+                    </p>
+                    <b>Features:</b>
+                    <br />
+                    <ul>
+                        <li>Imports HTML table</li>
+                        <li>Imports with table formatting </li>
+                    </ul>
+                    <br />
+                    <div id="cssStyle">
+                        <style type="text/css">
+                            th {
+                                color:rgb(0,0,0);
+                                font-family:Tahoma, sans-serif;
+                                font-size:10pt;
+                                white-space:nowrap;
+                                background-color:rgb(255,174,33);
+                                border-top:solid;
+                                border-top-width: thin;
+                                border-bottom:solid;
+                                border-bottom-width:thin;
+                                border-left:solid;
+                                border-left-width:thin;
+                                border-right:solid;
+                                border-right-width:thin;
+                                border-top-color:rgb(0,0,0);
+                                border-bottom-color:rgb(0,0,0);
+                                border-left-color:rgb(0,0,0);
+                                border-right-color:rgb(0,0,0);
+                                font-weight:bold;
+                                vertical-align:bottom;
+                            }
+
+                            td {
+                                color:rgb(0,0,0);
+                                font-family:Tahoma, sans-serif;
+                                font-size:10pt;
+                                white-space:nowrap;
+                                background-color:rgb(239,243,247);
+                                border-left:solid;
+                                border-left-width:thin;
+                                border-right:solid;
+                                border-right-width:thin;
+                                border-top-color:rgb(0,0,0);
+                                border-bottom-color:rgb(0,0,0);
+                                border-bottom:solid;
+                                border-bottom-width:thin;
+                                border-left-color:rgb(0,0,0);
+                                border-right-color:rgb(0,0,0);
+                                vertical-align:bottom;
+                            }
+                        </style>
+                    </div>
+                    <div id="Grid">
+                        <table cellspacing="0" width="500" style="table-layout:fixed;border-collapse:collapse;width:500pt">
+                            <tr>
+                                <th class="X64" style="text-align:left;">
+                                    <span>CustomerID</span>
+                                </th>
+                                <th class="X64" style="text-align:left;">
+                                    <span>CompanyName</span>
+                                </th>
+                                <th class="X64" style="text-align:left;">
+                                    <span>ContactName</span>
+                                </th>
+                                <th class="X64" style="text-align:left;">
+                                    <span>Phone</span>
+                                </th>
+                            </tr>
+                            <tr height="25">
+                                <td class="X65" style="text-align:left;">
+                                    <span>ALFKI</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Alfreds Futterkiste</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Maria Anders</span>
+                                </td>
+
+                                <td class="X65" style="text-align:left;">
+                                    <span>030-0074321</span>
+                                </td>
+                            </tr>
+                            <tr height="25">
+                                <td class="X65" style="text-align:left;">
+                                    <span>ANATR</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Ana Trujillo Emparedados</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Ana Trujillo</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>(5) 555-4729</span>
+                                </td>
+                            </tr>
+                            <tr height="25">
+                                <td class="X65" style="text-align:left;">
+                                    <span>ANTON</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Antonio Moreno Taquería</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Antonio Moreno</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>(5) 555-3932</span>
+                                </td>
+                            </tr>
+                            <tr height="25">
+                                <td class="X65" style="text-align:left;">
+                                    <span>AROUT</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Around the Horn</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Thomas Hardy</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>(171) 555-7788</span>
+                                </td>
+                            </tr>
+                            <tr height="25">
+                                <td class="X65" style="text-align:left;">
+                                    <span>BERGS</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Berglunds snabbköp</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Christina Berglund</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>0921-12 34 65</span>
+                                </td>
+                            </tr>
+                            <tr height="25">
+                                <td class="X65" style="text-align:left;">
+                                    <span>BLAUS</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Blauer See Delikatessen</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>Hanna Moos</span>
+                                </td>
+                                <td class="X65" style="text-align:left;">
+                                    <span>0621-08460</span>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    </div>
+                    <br />
+                    <input name="tableHTML" id="tbl" hidden="hidden"/>
+                    <div class="rowdiv">
+                        <div class="celldiv">
+                            <input id="ImportTbl" class="buttonStyle" type="submit" name="button" value="Export" onclick="importHTML()" style="width:125px;" />
+                        </div>
+                    </div>
+                </div>
+        </div>
+        Html.EndForm();
+    } }
+        <script type="text/javascript">
+                function importHTML() {
+                    let value = "<html>" + document.getElementById("cssStyle").innerHTML + "<body>" + document.getElementById("Grid").innerHTML + "</body></html>";
+                    value = value.replace("<tbody>", "");
+                    value = value.replace("</tbody>", "");
+                    document.getElementById("tbl").setAttribute("value", value);
+            }
+        </script>
+

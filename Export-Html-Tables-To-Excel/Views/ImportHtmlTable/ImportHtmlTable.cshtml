@@ -1,0 +1,34 @@
+﻿
+@{Html.BeginForm("ImportHtmlTable", "ImportHtmlTable", FormMethod.Post);
+        {
+    <div class="Common">
+        <div class="tablediv">
+            <div class="rowdiv">
+                <p>
+                    Essential XlsIO supports importing HTML tables into Excel worksheets. The ImportHtmlTable method loads an HTML file and imports all the tables in the file to the worksheet.
+                </p>
+                <b>Features:</b>
+                <br />
+                <ul>
+                    <li>Imports HTML table</li>
+                    <li>Imports with table formatting </li>
+                </ul>
+                <br />
+                <label>
+                    Click the "Input Template" button to view the HTML input document and click the "Import" button to view the output Excel document. Please
+                    note that Microsoft Excel Viewer or Microsoft Excel is required to view the Excel document.
+                </label>
+            </div>
+            <br />
+            <div class="rowdiv">
+                <div class="celldiv">
+                    <input id="viewtemplate" class="buttonStyle" type="submit" name="button" value="Input Template" style="width:125px;" />
+                    &nbsp;&nbsp;&nbsp;
+                    <input class="buttonStyle" type="submit" name="button" value="Import" style="width:125px;" />
+                </div>
+            </div>
+        </div>
+    </div>
+            Html.EndForm();
+        } }
+
